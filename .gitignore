@@ -1,17 +1,22 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+# Node dependencies
+node_modules/
 
-# Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
+# Build outputs
+dist/
+docs/
+tmp/
+out-tsc/
+bazel-out/
+.angular/cache
 
-# Node
-/node_modules
+# Logs
 npm-debug.log
 yarn-error.log
+testem.log
+libpeerconnection.log
 
-# IDEs and editors
+# IDE settings
+.vscode/
 .idea/
 .project
 .classpath
@@ -19,24 +24,22 @@ yarn-error.log
 *.launch
 .settings/
 *.sublime-workspace
+.history/
 
-# Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
+# Visual Studio
+.vs/
 
-# Miscellaneous
-/.angular/cache
+# Coverage and typings
+coverage/
+typings/
 .sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
 
 # System files
 .DS_Store
 Thumbs.db
+
+# Allow specific VSCode files (if needed)
+/.vscode/settings.json
+/.vscode/tasks.json
+/.vscode/launch.json
+/.vscode/extensions.json
