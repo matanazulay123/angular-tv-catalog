@@ -1,0 +1,41 @@
+<div class="form-container">
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <h2 >Register</h2>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" formControlName="email">
+        <div style="color: red;" *ngIf="!registerForm.controls.email?.valid && (registerForm.controls.email?.dirty || registerForm.controls.email?.touched)">invalid mail</div>
+
+    </div>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" formControlName="name">
+        <div style="color: red;" *ngIf="!registerForm.controls.name?.valid && (registerForm.controls.name?.dirty || registerForm.controls.name?.touched)">invalid name</div>
+
+    </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" formControlName="password">
+        <div style="color: red;" *ngIf="!registerForm.controls.password.valid && (registerForm.controls.password.dirty || registerForm.controls.password.touched)">invalid password</div>
+
+    </div>
+    <div class="form-group">
+        <label for="birthday">Birthday:</label>
+        <input type="date" class="form-control" id="birthday" formControlName="birthday" ngModel required>
+        <div style="color: red;" *ngIf="!registerForm.controls.birthday.valid && (registerForm.controls.birthday.dirty || registerForm.controls.birthday.touched)">invalid birthday</div>
+
+    </div>
+      <div class="form-group">
+        <label class="gender-label">Gender:</label>
+        <label for="male" class="gender-radio">
+          <input type="radio" id="male" name="gender" value="male" formControlName="gender" checked> Male
+        </label>
+        <br>
+        <label for="female" class="gender-radio">
+          <input type="radio" id="female" name="gender" value="female" formControlName="gender"> Female
+        </label>
+        <div style="color: red;" *ngIf="!registerForm.controls.gender.valid ">invalid gender</div>
+    </div>
+      <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+  </div>

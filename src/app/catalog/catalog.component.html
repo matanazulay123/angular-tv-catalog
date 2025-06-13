@@ -1,0 +1,8 @@
+<div class="row ">
+  <div class="col-sm-2 h-100 d-inline-block sidebar ">
+    <app-sidebar (changeGenre)="onGenreChange($event)"></app-sidebar>
+  </div>
+  <div class="col">
+    <app-products [toShow]="selectedGenre"></app-products>
+  </div>
+</div>
