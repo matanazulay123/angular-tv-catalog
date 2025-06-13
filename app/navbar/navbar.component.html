@@ -1,0 +1,31 @@
+<div class="div1">
+<ul class="list">
+    <li>
+        <h1 class="name ">My<span class="span ">Series</span></h1>
+    </li>
+    <li><a routerLink="home" class="li2 btn btn-text">
+        Home</a></li>
+    <li><a routerLink="catalog" class="li2 btn btn-text">
+        Catalog</a></li>
+    <li><a routerLink="pageNotFound" class="li2 btn btn-text">
+        Cart</a></li>
+    <li><a routerLink="about" class="li2 btn btn-text">
+        About </a></li>
+        
+    <div *ngIf="!loggedIn; then login else profile" ngbDropdown></div>
+    <ng-template #login>
+      <li><a routerLink="profile" routerLinkActive="active" class="li2 btn btn-text">Login</a></li>
+    </ng-template>
+    <ng-template #profile>
+        <div class="dropdown" ngbDropdown>
+          <a class="li2  dropdown-toggle p-2" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+            profile
+          </a>
+          <div class="dropdown-menu  "  ngbDropdownMenu aria-labelledby="dropdownMenuButton" style="z-index: -1; height: 100px; width: 40px; position: relative; left: 20px;">
+            <li class="li1 dropdown-item   "><button class="btn btn-text " (click)="userDetails()" style="color: #f2f0f3e5; font-size: small;">User details</button></li>
+            <li class="li1 dropdown-item  "><button class="btn btn-text " (click)="logout()" style="color: #f2f0f3e5; font-size: small;">Logout</button></li>
+          </div>
+        </div>
+      </ng-template>
+  </ul>
+</div>

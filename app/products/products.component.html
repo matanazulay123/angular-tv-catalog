@@ -1,0 +1,12 @@
+<div class="row ">
+  <div class="col d-flex justify-content-around" *ngFor="let P of series">
+    <div class="card  text-dark bg-light"  >
+      <img class="card-img-top w-100 h-75 " [src]="P.getPicture()" alt="{{ P.getTitle() }}">
+      <div class="card-body">
+        <h6 class="card-title"><small>{{ P.getTitle() }}</small></h6>
+        <p class="card-text"><small> {{ P.getYear() }}</small></p>
+        <button type="button" class="btn  btn-primary btn-sm">Add to cart</button>
+      </div>
+    </div>
+  </div>
+</div>

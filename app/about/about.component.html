@@ -1,0 +1,35 @@
+<fieldset class="fsbtn" [ngClass]="{'invert-colors': invertColors}" >
+ <legend class="accessibility"><b>Accessibility</b></legend>
+
+<div id="app-cover">
+    <div class="toggle-button-cover">
+      <div class="button-cover">
+        <div class="button r" id="button-1">
+          <input type="checkbox" class="checkbox" (click)="toggleColors()" />
+          <div class="knobs"></div>
+          <div class="layer"></div>
+        </div>
+      </div>
+    </div>  
+</div>
+</fieldset>
+<fieldset class="fs" [ngClass]="{'invert-colors': invertColors}" >
+
+  <h6 class="about"  [ngClass]="{'invert-colors': invertColors}" >.האתר מכיל מידע אודות שני המשתתפים בבניית האתר*</h6>
+  <h6 class="about"  [ngClass]="{'invert-colors': invertColors}">.המידע שניתן למצוא עבור כל אחד מהמשתתפים: תמונה, שם , תז' וכתובת מייל</h6>
+ 
+  <div class="container">
+   
+    <div class="image" >
+      <img [src]='imgUrl1'/> 
+      <h1 class="imgName" [ngClass]="{'invert-colors': invertColors}">{{name1}}</h1>
+      <h3 class="imgName" [ngClass]="{'invert-colors': invertColors}">ID: {{id1}}</h3>
+    </div>
+   
+    <div class="image" >
+      <img [src]='imgUrl2'/>
+      <h1 class="imgName" [ngClass]="{'invert-colors': invertColors}">{{name2}}</h1>
+      <h3 class="imgName" [ngClass]="{'invert-colors': invertColors}">ID: {{id2}}</h3>
+    </div>
+  </div>
+</fieldset>

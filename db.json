@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "email": "ron@gmail.com",
+      "password": "12345",
+      "name": "ron",
+      "birthday": "12-3-2000",
+      "gender": "male",
+      "id": "99c5",
+      "picture": "assets/male.jpg"
+    },
+    {
+      "email": "ronit@gmail.com",
+      "password": "11111",
+      "name": "ronit",
+      "birthday": "30-4-1999",
+      "gender": "female",
+      "id": "23af",
+      "picture": "assets/female.jpg"
+    },
+    {
+      "id": "8feb",
+      "email": "osher@gmail.com",
+      "password": "12345678",
+      "name": "osher",
+      "birthday": "2024-05-01",
+      "gender": "female",
+      "picture": "assets/female.jpg"
+    },
+    {
+      "id": "e621",
+      "email": "matanazulay123@gmail.com",
+      "password": "11223344",
+      "name": "matan",
+      "birthday": "2024-04-24",
+      "gender": "male",
+      "picture": "assets/male.jpg"
+    }
+  ]
+}
